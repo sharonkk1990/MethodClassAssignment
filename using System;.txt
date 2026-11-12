@@ -1,0 +1,44 @@
+using System;
+
+namespace MethodClassAssignment
+{
+    // 1. Create a class.
+    public class MathOperations
+    {
+        // 2. In that class, create a void method that takes two integers as parameters.
+        // Have the method do a math operation on the first integer and display the second integer to the screen.
+        public void ProcessNumbers(int num1, int num2)
+        {
+            // Perform a math operation on the first integer (e.g., adding 10 to it)
+            int result = num1 + 10;
+
+            // Output the result of the math operation on the first integer
+            Console.WriteLine($"Math operation result on the first integer ({num1} + 10): {result}");
+
+            // Display the second integer to the screen
+            Console.WriteLine($"The second integer is: {num2}");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // 3. Call the method in the class, instantiating the class.
+            MathOperations mathOp = new MathOperations();
+
+            // 4. Call the method in the class, passing in two numbers.
+            // (Passing two numbers normally, e.g., 5 and 20)
+            Console.WriteLine("--- Calling method with two integers normally ---");
+            mathOp.ProcessNumbers(5, 20);
+
+            // 5. Call the method in the class, specifying the parameters by name.
+            Console.WriteLine("\n--- Calling method specifying parameters by name ---");
+            mathOp.ProcessNumbers(num1: 8, num2: 45);
+
+            // Keep console open to view output
+            Console.WriteLine("\nPress any key to exit...");
+            Console.ReadKey();
+        }
+    }
+}
